@@ -10,6 +10,22 @@
     <script>
         fetch("https://services-dev.ultainc.com/innovation/api/v1/subscribe", {
             method: 'POST',
+            // mode: 'cors',
+            headers: {
+            'Content-Type': 'application/json',
+            'x-api-key': 'vTAdVJMYpGfUAZmIT73p4NKAxw6Gyopf'
+            },
+            body: JSON.stringify({
+                "email": "some2@email.com",
+                "campaign": "nft"
+            })
+        })
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+
+        fetch("https://us-central1-ulta-innovation-sandbox.cloudfunctions.net/function-1", {
+            method: 'POST',
+            // mode: 'cors',
             headers: {
             'Content-Type': 'application/json',
             'x-api-key': 'vTAdVJMYpGfUAZmIT73p4NKAxw6Gyopf'
@@ -44,19 +60,19 @@
 
         
 
-        fetch("https://glamlab-api-sb.ultainc.com/innovation/api/v1/subscribe", {
-            method: 'POST',
-            headers: {
-            'Content-Type': 'application/json',
-            'x-api-key': 'AIzaSyCmTDgR5Z95n8efyM5RQd3pvonJnodbln4'
-            },
-            body: JSON.stringify({
-                "email": "some2@email.com",
-                "campaign": "nft"
-            })
-        })
-        .then((response) => response.json())
-        .then((data) => console.log(data));
+        // fetch("https://glamlab-api-sb.ultainc.com/innovation/api/v1/subscribe", {
+        //     method: 'POST',
+        //     headers: {
+        //     'Content-Type': 'application/json',
+        //     'x-api-key': 'AIzaSyCmTDgR5Z95n8efyM5RQd3pvonJnodbln4'
+        //     },
+        //     body: JSON.stringify({
+        //         "email": "some2@email.com",
+        //         "campaign": "nft"
+        //     })
+        // })
+        // .then((response) => response.json())
+        // .then((data) => console.log(data));
     </script>
 </body>
 </html>
